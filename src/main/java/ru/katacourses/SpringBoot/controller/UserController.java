@@ -33,7 +33,7 @@ public class UserController {
     }
 
     @PostMapping("/addUser")
-    public String createUser(@ModelAttribute("user")  User user) {
+    public String createUser(@ModelAttribute("user") User user) {
         userService.add(user);
         return "redirect:/users";
     }
@@ -45,7 +45,7 @@ public class UserController {
     }
 
     @PostMapping("/edit")
-    public String updateUser(@ModelAttribute("user")  User user) {
+    public String updateUser(@ModelAttribute("user") User user) {
         userService.update(user);
         return "redirect:/users";
     }

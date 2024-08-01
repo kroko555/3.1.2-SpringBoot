@@ -14,12 +14,11 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
     @Autowired
-    public UserServiceImpl (UserDao userDao) {
+    public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
     }
 
     @Override
-    @Transactional
     public List<User> getUsers() {
         return userDao.getUsers();
     }
@@ -43,7 +42,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional
     public User getUserById(Long id) {
         return userDao.getUserById(id);
     }
